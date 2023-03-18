@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BACKEND_TF="backend.tf"
+
+mv ${BACKEND_TF} ${BACKEND_TF}.disabled
+
+terraform init
+
+mv ${BACKEND_TF}.disabled ${BACKEND_TF}
